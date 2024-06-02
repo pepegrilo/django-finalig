@@ -1,0 +1,9 @@
+body {
+  background-color: #007bff; /* Fondo azul */
+  color: #ffffff; /* Texto en color blanco para mayor contraste */
+  font-family: 'Arial', sans-serif; /* Fuente */
+  margin: 0; /* Eliminar márgenes predeterminados */
+  padding: 0; /* Eliminar padding predeterminado */
+}
+
+

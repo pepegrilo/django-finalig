@@ -1,0 +1,77 @@
+body {
+  background-color: #F8F9F9; /* Fondo azul */
+  color: #ffffff; /* Texto en color blanco para mayor contraste */
+  font-family: 'Arial', sans-serif; /* Fuente */
+  margin: 0; /* Eliminar márgenes predeterminados */
+  padding: 0; /* Eliminar padding predeterminado */
+}
+
+
+h1 {
+  color: #2c3e50; /* Color del texto */
+  font-family: 'Arial', sans-serif; /* Fuente */
+  font-size: 2.5em; /* Tamaño del texto */
+  text-align: center; /* Alineación del texto */
+  margin-top: 20px; /* Espaciado superior */
+  margin-bottom: 20px; /* Espaciado inferior */
+  font-weight: bold; /* Grosor del texto */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Sombra del texto */
+}
+
+
+/* Estilo para los elementos <ul> */
+ul {
+  list-style-type: none; /* Eliminar viñetas predeterminadas */
+  padding: 0; /* Eliminar padding predeterminado */
+  margin: 20px 0; /* Espaciado superior e inferior */
+}
+
+/* Estilo para los elementos <li> */
+li {
+  background-color: #AEB6BF; /* Fondo azul oscuro */
+  color: #272626; /* Color del texto (blanco) */
+  margin: 5px 0; /* Espaciado entre elementos de la lista */
+  padding: 10px; /* Relleno dentro de cada elemento de la lista */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 1.2em; /* Tamaño del texto */
+}
+
+a {
+  /*background-color: #AEB6BF;  Fondo azul oscuro */
+  color: #272626; /* Color del texto (blanco) */
+  margin: 5px 0; /* Espaciado entre elementos de la lista */
+  padding: 10px; /* Relleno dentro de cada elemento de la lista */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 1.2em; /* Tamaño del texto */
+}
+
+form {
+  background-color: #ffffff; /* Fondo blanco */
+  color: #2c3e50; /* Color del texto */
+  padding: 20px; /* Relleno dentro del formulario */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+  max-width: 500px; /* Ancho máximo del formulario */
+  margin: 0 auto; /* Centrar el formulario horizontalmente */
+}
+
+form button {
+  background-color: #5D6D7E; /* Fondo azul oscuro */
+  color: #ffffff; /* Color del texto */
+  padding: 10px 20px; /* Relleno dentro del botón */
+  border: none; /* Eliminar borde */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 1em; /* Tamaño del texto */
+  cursor: pointer; /* Cambiar el cursor a pointer al pasar el ratón */
+  transition: background-color 0.3s; /* Transición suave para el cambio de fondo */
+}
+
+p{
+  background-color: #AEB6BF; /* Fondo azul oscuro */
+  color: #272626; /* Color del texto (blanco) */
+  margin: 5px 0; /* Espaciado entre elementos de la lista */
+  /* padding: 10px; Relleno dentro de cada elemento de la lista */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 1.2em; /* Tamaño del texto */
+  
+}

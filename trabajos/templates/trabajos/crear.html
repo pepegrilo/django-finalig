@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Trabajo de Grado</title>
+    <link type="text/css" rel="stylesheet" href='{%static "/formato.css" %}'>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Crear Trabajo de Grado</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+    </form>
+    <a HREF="http://127.0.0.1:8000/"> Volver a la Pagina de inicio </a>
+
+    <script>
+        $(document).ready(function() {
+            function loadActivities() {
+                var modalidadId = $('#id_modalidad').val();
+                $.ajax({
+                    url: '{% url "obtener_actividades" %}',
+                    data: {
+                        'modalidad_id': modalidadId
+                    },
+                    success: function(data) {
+                        var $activities = $('#id_actividades');
+                        $activities.empty();
+                        for (var i = 0; i < data.length; i++) {
+                            var actividad = data[i];
+                            $activities.append(
+                                '<label><input type="checkbox" name="actividades" value="' + actividad.id + '" checked> ' + actividad.nombre + '</label><br>'
+                            );
+                        }
+                    }
+                });
+            }
+
+            $('#id_modalidad').change(loadActivities);
+
+            // Trigger change event on page load to load activities for existing modalidad
+            loadActivities();
+        });
+    </script>
+</body>
+</html>

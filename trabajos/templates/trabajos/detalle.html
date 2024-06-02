@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalle del Trabajo de Grado</title>
+    <link rel="stylesheet" href="{% static '/formato.css' %}">
+</head>
+<body>
+    <form>
+    <h1>{{ trabajo.nombre }}</h1>
+    <p>Modalidad: {{ trabajo.modalidad }}</p>
+    <p>Programa: {{ trabajo.programa }}</p>
+    <p>Estudiantes:
+        <ul>
+            {% for estudiante in trabajo.estudiantes.all %}
+                <li>{{ estudiante }}</li>
+            {% endfor %}
+        </ul>
+    </p>
+    <p>Profesores:
+        <ul>
+            {% for profesor in trabajo.profesores.all %}
+                <li>{{ profesor }}</li>
+            {% endfor %}
+        </ul>
+    </p>
+    <p>Jurados:
+        <ul>
+            {% for jurado in trabajo.jurados.all %}
+                <li>{{ jurado }}</li>
+            {% endfor %}
+        </ul>
+    </p>
+    <p>Asesores:
+        <ul>
+            {% for asesor in trabajo.asesores.all %}
+                <li>{{ asesor }}</li>
+            {% endfor %}
+        </ul>
+    </p>
+    <p>actividad:
+        <ul>
+            {% for actividad in trabajo.actividades.all %}
+                <li>{{ actividad }}</li>
+            {% endfor %}
+        </ul>
+    </p>
+    <p>Empresa: {{ trabajo.empresa }}</p>
+    <p>Fecha de inicio: {{ trabajo.fecha_inicio }}</p>
+    <p>Vigente: {{ trabajo.vigente }}</p>
+    <p>Estado: {{ trabajo.estado }}</p>
+    </form>
+<a HREF="http://127.0.0.1:8000/"> Volver a la Pagina de inicio </a>
+</body>
+</html>

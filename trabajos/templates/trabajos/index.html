@@ -1,0 +1,20 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajos de Grado</title>
+    <link rel="stylesheet" href="{% static '/formato.css' %}">
+</head>
+<body>
+    <h1>Trabajos de Grados</h1>
+    <ul>
+        {% for trabajo in trabajos %}
+            <li><a href="{% url 'detalle_trabajo' trabajo.id %}">{{ trabajo.nombre }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'crear_trabajo' %}">Crear nuevo trabajo de grado</a>
+</body>
+</html>
